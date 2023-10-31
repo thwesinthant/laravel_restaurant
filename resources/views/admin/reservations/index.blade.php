@@ -61,7 +61,7 @@
                                         class=" text-right   h-24  whitespace-nowrap gap-2 flex items-center justify-center">
                                         <a href="{{ route('admin.reservations.edit', $reservation->id) }}"
                                             class="font-medium px-2 py-1 rounded-lg text-center   bg-blue-600 text-white">Edit</a>
-                                        <form action="{{ route('admin.tables.destroy', $reservation->id) }}"
+                                        <form action="{{ route('admin.reservations.destroy', $reservation->id) }}"
                                             method="POST" onsubmit="return confirm('Are you sure?')">
                                             @method('DELETE')
                                             @csrf
