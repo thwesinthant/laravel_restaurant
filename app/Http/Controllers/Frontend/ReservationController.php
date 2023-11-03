@@ -30,7 +30,7 @@ class ReservationController extends Controller
             'email' => ['required', 'email'],
             'res_date' => ['required', 'date', new DateBetween, new TimeBetween],
             'tel_number' => ['required'],
-            'guest_number' => ['required'],
+            'guest_number' => ['required', 'numeric', 'between:2,6'],
         ]);
 
         if (empty($request->session()->get('reservation'))) {
